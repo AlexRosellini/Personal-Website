@@ -1,0 +1,6 @@
+@media screen and (max-width: 900px) {
+    .links {
+        @include flex-C;
+        flex-direction: column;
+    }
+}

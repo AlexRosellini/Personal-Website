@@ -1,0 +1,57 @@
+.links-char {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.links-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px; 
+    @include margin-top-bottom-big;
+    height: 400px;
+    width: 50%;
+    background-color: $card;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+    }
+
+
+    &__top {
+       
+        @include flex-C;
+        flex-direction: column;
+
+        & h2 {
+            @include padding-top-bottom-small;
+        }
+
+        &-img {
+            border: 1px solid black;
+            margin-bottom: -4px;
+            height: 250px;
+            width: 100%;
+        }
+
+        & img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__bottom {
+
+        @include padding-top-bottom-small;
+        @include padding-left-right-small;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 16px;
+
+        & span {
+            font-weight: bolder;
+        }
+    }
+}

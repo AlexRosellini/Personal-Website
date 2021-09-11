@@ -1,0 +1,140 @@
+.article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px;
+    min-width: 800px;
+    display: flex;
+    @include margin-top-bottom-big;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $card-light;
+    height: 100%;
+    @include padding-left-right-large;
+  }
+  
+  ul {
+    @include padding-top-small;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding-bottom: 10px;
+    
+    li {
+      display: inline-flex;
+      
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        transition: all .3s ease-in-out;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          color: rgb(122, 47, 9);
+        }
+      }
+    }
+  }
+  
+  .nav .active a { 
+    color: rgb(49, 16, 0); 
+    border-bottom: 1px solid slateblue;
+    &:hover {
+      border-color: transparent;
+      background: slateblue;
+      color: white;
+    }
+  }
+  
+  .tab-pane { 
+    display: none;
+  }
+  
+  .tab-pane.active { 
+    display: block;
+  }
+
+  .cardChar {
+
+    &_title { 
+        text-align: center;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 18px;
+        @include margin-top-bottom-big;
+        color: red;
+    }
+
+    &_subtitle { 
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        font-size: 16px;
+        @include margin-top-bottom-small;
+    }
+    
+    &_imgs { 
+        display: flex; 
+        flex-direction:column;
+    }
+
+    &_titlesimg { 
+        display: flex; 
+        justify-content:space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+        @include margin-top-bottom-big;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 18px;
+    }
+    &_imgproper {
+        display: flex; 
+        justify-content: space-between;
+
+        & img { 
+            width: 100%;
+            height: 350px;
+        }
+    }
+    
+    &_text { 
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 16px;
+    }
+  }
+
+  .imgdiv1 {
+      border-right: 4px solid black;
+      width: 50%;
+  }
+
+  span {
+      font-weight: bolder;
+  }
+
+  .npc-name{
+      text-align: center;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 18px;
+      color: blue
+      }
+
+
+  .npc-img-container {
+    @include flex-C;
+    @include padding-top-bottom-big;
+
+  }
+
+  .npc-img {
+      @include flex-C;
+      width: 300px;
+      height: 400px;
+      border: 4px solid black;
+
+    & img { 
+        width: 300px;
+        height: 400px;
+    }
+  }
